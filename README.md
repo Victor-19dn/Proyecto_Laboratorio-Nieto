@@ -24,7 +24,7 @@ En esta primera instancia el objetivo está centrado principalmente en la creaci
 
 
 Diagrama Entidad-Relación (D-E-R)
- 
+ ![alt text](Proyecto_Laboratorio-Nieto.png)
 
 
 Listado de tablas
