@@ -90,45 +90,56 @@ Listado de tablas
 
 Grilla de tablas con campos, tipos de datos y tipos de claves
 ```
-Tabla	Campo	Nombre de campo completo	Tipo de dato	Tipo de clave
-Analisis	id_analisis	Identificador análisis	INT	PK
-	tipo_analisis	Tipo de análisis	VARCHAR (100)	
-	precio	Precio de análisis	DECIMAL (8,2)	
-Staff_bioquimica	id_bioquimico	Identificador bioquímico	INT	PK
-	nombre_bioquimico	Nombre de bioquímico	VARCHAR (60)	
-	matricula	Matrícula de bioquímico	VARCHAR (25)	
-Staff_enfermeria	id_ enfermero	Identificador enfermero	INT	PK
-	nombre_ enfermero	Nombre de enfermero	VARCHAR (60)	
-Insumos	id_insumo	Identificador insumo	INT	PK
-	tipo_insumo	Tipo de insumo	VARCHAR (100)	
-	fecha_vencimiento	Fecha de vencimiento	DATE	
-	precio	Precio de insumo	DECIMAL (8,2)	
-	id_proveedor	Identificador proveedor	INT	FK
-Proveedores	id_proveedor	Identificador proveedor	INT	PK
-	nombre_proveedor	Nombre de proveedor	VARCHAR (100)	
-	direccion	Dirección de proveedor	VARCHAR (100)	
-	telefono	Teléfono de proveedor	VARCHAR (20)	
-Pacientes	id_paciente	Identificador paciente	INT	
-	nombre_completo	Nombre completo de paciente	VARCHAR (100)	PK
-	fecha_nacimiento	Fecha de nacimiento	DATE	
-	sexo	Sexo de paciente	VARCHAR (9)	
-	telefono	Teléfono de paciente	VARCHAR (20)	
-	e_mail	E-mail de paciente	VARCHAR (100)	
-	id_obra_social	Identificador obra social	INT	FK
-Obra Social	id_obra_social	Identificador obra social	INT	PK
-	nombre	Nombre de obra social	VARCHAR (100)	
-	cobertura	Cobertura de obra social	DECIMAL (8,2)	
-Pedido_Analisis	id_pedido	Identificador pedido	INT	PK
-	fecha	Fecha de pedido de análisis	DATETIME	
-	id_paciente	Identificador paciente	INT	FK
-	id_analisis	Identificador análisis	INT	FK
-	id_bioquimico	Identificador bioquímico	INT	FK
-	id_enfermero	Identificador enfermero	INT	FK
-	insumo_necesario	Insumo necesario para análisis	INT	FK
-Factura	id_factura	Identificador factura	INT	PK
-	id_pedido	Identificador pedido	INT	FK
-	id_analisis	Identificador análisis	INT	FK
-	id_insumo	Identificador insumo	INT	FK
-	id_obra_social	Identificador obra social	INT	FK
-	precio_total	Precio total	DECIMAL (8,2)	
++---------------------------------------------------------------------------------------------------------+
+| Tabla              | Campo	         | Nombre de campo completo	  | Tipo de dato  | Tipo de clave |
++---------------------------------------------------------------------------------------------------------+
+| Analisis           | id_analisis	 | Identificador análisis	  | INT	          | PK            |
+|	             | tipo_analisis	 | Tipo de análisis	          | VARCHAR (100) |               |
+|	             | precio	         | Precio de análisis	          | DECIMAL (8,2) |               |
++---------------------------------------------------------------------------------------------------------+
+| Staff_bioquimica   | id_bioquimico	 | Identificador bioquímico	  | INT	          | PK            |
+|                    | nombre_bioquimico | Nombre de bioquímico	          | VARCHAR (60)  |               |
+|	             | matricula	 | Matrícula de bioquímico	  | VARCHAR (25)  |               |
++---------------------------------------------------------------------------------------------------------+
+| Staff_enfermeria   | id_ enfermero	 | Identificador enfermero        | INT	          | PK            |
+|	             | nombre_ enfermero | Nombre de enfermero	          | VARCHAR (60)  |               |	
++---------------------------------------------------------------------------------------------------------+
+| Insumos	     | id_insumo         | Identificador insumo	          | INT	          | PK            |
+|	             | tipo_insumo	 | Tipo de insumo	          | VARCHAR (100) |               |
+|	             | fecha_vencimiento | Fecha de vencimiento	          | DATE	  |               |
+|	             | precio	         | Precio de insumo	          | DECIMAL (8,2) |               |
+|	             | id_proveedor	 | Identificador proveedor	  | INT	          | FK            |
++---------------------------------------------------------------------------------------------------------+
+| Proveedores	     | id_proveedor	 | Identificador proveedor	  | INT	          | PK            |
+|	             | nombre_proveedor	 | Nombre de proveedor	          | VARCHAR (100) |               |
+|	             | direccion	 | Dirección de proveedor	  | VARCHAR (100) |               |
+|	             | telefono	         | Teléfono de proveedor	  | VARCHAR (20)  |               |
++---------------------------------------------------------------------------------------------------------+
+| Pacientes	     | id_paciente	 | Identificador paciente	  | INT	          | PK            |
+|		     | nombre_completo	 | Nombre completo de paciente	  | VARCHAR (100) |               |
+|		     | fecha_nacimiento	 | Fecha de nacimiento	          | DATE	  |               |
+|		     | sexo	         | Sexo de paciente	          | VARCHAR (9)	  |               |
+|		     | telefono	         | Teléfono de paciente	          | VARCHAR (20)  |               |
+|		     | e_mail	         | E-mail de paciente	          | VARCHAR (100) |               |
+|		     | id_obra_social	 | Identificador obra social	  | INT	          | FK            |
++---------------------------------------------------------------------------------------------------------+
+| Obra Social        | id_obra_social	 | Identificador obra social	  | INT	          | PK            |
+|	             | nombre	         | Nombre de obra social	  | VARCHAR (100) |               |
+|	             | cobertura	 | Cobertura de obra social	  | DECIMAL (8,2) |               |
++---------------------------------------------------------------------------------------------------------+
+| Pedido_Analisis    | id_pedido	 | Identificador pedido	          | INT	          | PK            |
+|		     | fecha	         | Fecha de pedido de análisis	  | DATETIME	  |               |
+|		     | id_paciente	 | Identificador paciente	  | INT	          | FK            |
+|		     | id_analisis       | Identificador análisis	  | INT	          | FK            |
+|		     | id_bioquimico     | Identificador bioquímico	  | INT	          | FK            |
+|		     | id_enfermero	 | Identificador enfermero	  | INT	          | FK            |
+|		     | insumo_necesario	 | Insumo necesario para análisis | INT	          | FK            |
++---------------------------------------------------------------------------------------------------------+
+| Factura            | id_factura	 | Identificador factura	  | INT	          | PK            |
+|	             | id_pedido	 | Identificador pedido	          | INT	          | FK            |
+|	             | id_analisis	 | Identificador análisis	  | INT	          | FK            |
+|	             | id_insumo	 | Identificador insumo	          | INT	          | FK            |
+|	             | id_obra_social	 | dentificador obra social	  | INT	          | FK            |
+|	             | precio_total	 | Precio total	                  | DECIMAL (8,2) |               |	
++---------------------------------------------------------------------------------------------------------+
 ```
