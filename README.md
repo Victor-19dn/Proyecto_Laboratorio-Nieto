@@ -143,3 +143,21 @@ Grilla de tablas con campos, tipos de datos y tipos de claves
 |	             | precio_total	 | Precio total	                  | DECIMAL (8,2) |               |	
 +---------------------------------------------------------------------------------------------------------+
 ```
+
+
+
+
+
+
+SEGUNDA ENTREGA
+
+Proyecto_Laboratorio-Nieto
+
+Victor Daniel Nieto
+
+
+Para esta segunda entrega llevé a cabo la inserción de datos en la base de datos previamente creada. Para esto aproveché en mayor medida el recurso de la plataforma Mokaroo (https://www.mockaroo.com/) para crear datos de forma aleatoria siguiendo ciertos parámetros que fueran funcionales para las tablas que había creado, por otro lado también utilicé algunos tipos de análisis clínicos y precios aproximados calculados a partir del índice NBU (Nomeclador Bioquímico Único) obtenido a través de la biblioteca digital de la Confederación Unificada Bioquímica de la República Argentina (CUBRA) (https://cubra.org.ar/biblioteca/).
+
+En este mismo repositorio agrego el script de inserción de datos mediante un archivo .sql con el nombre "Proyecto_Laboratorio_Nieto_segunda_entrega".
+El orden de inserción en las tablas es el planteado en el script, este mismo fue probado en MySQL Workbench y funciona correctamente ejecutando el script entero.
+Una aclaración sobre cambios que realicé que están presentes en el script es la modificación del tipo de dato de dos columnas pertenecientes a dos tablas. Por un lado modifiqué la columna cobertura de la tabla Obra_Social cambiando el tipo de dato a VARCHAR para que pudiera ingresar valores numéricos más el símbolo de porcentaje, y por otro lado, modifiqué la columna id_obra_social de la tabla Pacientes pasando permitiendo que admitiera valores nulos. En este último caso lo hice considerando que posteriormente pudiera recibir valores nulos equivalentes a pacientes que no tengan una obra social.
